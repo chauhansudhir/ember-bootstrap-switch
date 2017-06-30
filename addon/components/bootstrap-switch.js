@@ -266,7 +266,7 @@ export default Ember.Component.extend({
     } // for ()
 
     // Inject the "helpful default" when not defined as an attribute
-    if (!newAttrs.hasOwnProperty('indeterminate')) {
+    if (newAttrs.hasOwnProperty && !newAttrs.hasOwnProperty('indeterminate')) {
       $element.bootstrapSwitch( 'indeterminate', this.get('indeterminate') );
     }
 
