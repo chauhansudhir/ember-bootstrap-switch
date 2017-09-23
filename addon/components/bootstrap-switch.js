@@ -199,7 +199,7 @@ export default Ember.Component.extend({
   // Task to update the bootstrap-switch as options are changed.
   // This replaces the observers used in an older version of this addon.
   didUpdateAttrs( attrs ) {
-    attrs = attrs || {}
+    attrs = attrs || {newAttrs: {}, oldAttrs: {}}
     this._super(...arguments);
     const {newAttrs, oldAttrs} = attrs; // cool ES2015 syntax to destructure named properties
 
